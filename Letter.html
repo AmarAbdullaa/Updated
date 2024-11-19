@@ -1,4 +1,11 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excuse Letter</title>
+  <style>
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -207,3 +214,75 @@ nav a.active {
     text-decoration: underline;
   }
   
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="logo.png" alt="PEAK Logo">
+        </div>
+       
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="ground_reservation.php">Dashboard</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#" >Contact</a></li></li>
+            </ul>
+        </nav>
+        <button class="bell-icon">
+            <i class="uil uil-bell"></i>
+        </button>
+
+        
+       
+    </div>
+    
+    <div class="dropdown-menu" id="dropdownMenu">
+        <!-- <ul>
+            <li><a href="#"><i class="uil uil-user"></i> My Profile</a></li>
+            <li><a href="#"><i class="uil uil-signout"></i> Log out</a></li>
+        </ul> -->
+    </div>
+</header>
+    <main class="main-content">
+      <h1>Excuse Letter</h1>
+      <p class="description">You can submit an excuse letter for an attendance record after the class has ended. You can also download a copy of your attendance record at any time.</p>
+      
+      <h2>Excuse letter status</h2>
+      <table class="status-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Date</th>
+            <th>Excuse status</th>
+            <th>Excuse reason</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Injury</td>
+            <td>04/11/2023</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>Doctor's note</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+          <tr>
+            <td>Exams</td>
+            <td>04/09/2023</td>
+            <td><span class="status approved">Approved</span></td>
+            <td>Family emergency</td>
+            <td><a href="#">Download</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="submit-button">Submit a new excuse letter</button>
+    </main>
+  </div>
+</body>
+</html>
