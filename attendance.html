@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <style>
+    /* General Reset */
+body, h1, h2, ul, li, a, table, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  display: flex;
+  background-color: #f5f6f8;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin-bottom: 20px;
+}
+.sidebar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.sidebar li.active a {
+  color: #007bff;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+header h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.filter-group h2 {
+  margin-bottom: 10px;
+}
+.filter-btn {
+  background-color: #f5f6f8;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+.calendar {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.calendar table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.calendar th, .calendar td {
+  padding: 10px;
+}
+.calendar td.active {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Student Table */
+.students h2 {
+  margin-bottom: 10px;
+}
+.students input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+td:last-child {
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  
+    <main class="content">
+      <header>
+        <h1>Attendance</h1>
+      </header>
+      <section class="filters">
+        <div class="filter-group">
+          <h2>Select a course</h2>
+          <button class="filter-btn active">Course 101</button>
+          <button class="filter-btn">Course 102</button>
+          <button class="filter-btn">Course 103</button>
+        </div>
+        <div class="filter-group">
+          <h2>Select a date</h2>
+          <div class="calendar">
+            <h3>January 2023</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>S</th>
+                  <th>M</th>
+                  <th>T</th>
+                  <th>W</th>
+                  <th>T</th>
+                  <th>F</th>
+                  <th>S</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td>
+                </tr>
+                <tr>
+                  <td>4</td><td>5</td><td class="active">6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+                </tr>
+                <tr>
+                  <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+                </tr>
+                <tr>
+                  <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
+                </tr>
+                <tr>
+                  <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="students">
+        <h2>Search students</h2>
+        <input type="text" placeholder="Search by student name">
+        <table>
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice Smith</td>
+              <td>alice.smith@gmail.com</td>
+              <td>Present</td>
+            </tr>
+            <tr>
+              <td>Bob Johnson</td>
+              <td>bob.johnson@gmail.com</td>
+              <td>Absent</td>
+            </tr>
+            <tr>
+              <td>Charlie Yang</td>
+              <td>charlie.yang@gmail.com</td>
+              <td>Present</td>
+            </tr>
+            <tr>
+              <td>Diana Lee</td>
+              <td>diana.lee@gmail.com</td>
+              <td>Late</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
